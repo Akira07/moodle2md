@@ -3,7 +3,7 @@ require 'bundler/setup'
 require 'nokogiri'
 require 'reverse_markdown'
 
-arr =  Dir.glob("submit_files/**/*.html")
+arr =  Dir.glob("submit_files/**/onlinetext.html")
 
 c = ""
 arr.each do |i|
@@ -16,7 +16,7 @@ arr.each do |i|
   md_text = ReverseMarkdown.convert html_text
 
   md_text.gsub!(/&nbsp;/, '')
-  c += md_text + "---\n"
+  c += md_text + "\n---\n\n"
 
 end
 

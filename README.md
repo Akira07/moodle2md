@@ -11,3 +11,6 @@ Moodleに提出されたオンラインテキストをマークダウンファ�
 
 1. `$ bundle install --path vendor/bundle`
 2. `$ bundle exec ruby run.rb`
+
+
+現状，submit_files 内の全ての onlinetext.html を1つのマークダウンファイルに変換します
