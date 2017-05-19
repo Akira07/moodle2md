@@ -11,6 +11,8 @@
 /tmp/
 .DS_Store
 /**/.DS_Store
+/submit_files/**/*
+output.md
 
 # Used by dotenv library to load environment variables.
 # .env
