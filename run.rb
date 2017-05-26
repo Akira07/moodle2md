@@ -7,10 +7,8 @@ files =  Dir.glob("submit_files/**/onlinetext.html")
 
 c = ""
 files.each do |file|
-  f = File.open(file)
-  html = f.read
-  f.close
-  name = file.match(/\/.+\/([\p{Han}\s]+)_\d+_assignsubmission_onlinetext_\/onlinetext\.html\z/)[1]
+  html = File.read file
+  name = file.match(/\/.+\/(.+)_\d+_assignsubmission_onlinetext_\/onlinetext\.html\z/)[1]
   page = Nokogiri::HTML.parse(html, nil, 'UTF-8')
   html_text = page.search('body').children.to_s
   
